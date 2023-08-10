@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/guili/CLionProjects/NumericCalculus
+# Install script for directory: C:/Users/guili/OneDrive/Documentos/GitHub/NumericCalculus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/guili/CLionProjects/NumericCalculus/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/guili/OneDrive/Documentos/GitHub/NumericCalculus/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
