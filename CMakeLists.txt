@@ -4,4 +4,4 @@ project(NumericCalculus C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(NumericCalculus
-        Factorial.c)
+        Cap3.8.c)
