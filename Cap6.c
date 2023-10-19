@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <locale.h>
+
 #define max_i 50
 #define max_j 50
 #define max_v 50
@@ -39,26 +39,29 @@ void imprime_Vet(double B[max_v], int order){
     }
 }
 
-void sub_Retroativa(double M[max_i][max_j], double B[max_v], double A[max_v], int n){
-    int cont_n, cont_m; // contador de linhas e colunas
-    double soma;
-    A[n - 1] = B[n - 1] / M[n - 1][n - 1];
-    for (cont_n = n - 1; cont_n >= 1; cont_n--) {
-        soma = 0;
-        for (cont_m = cont_n + 1; cont_m <= n; cont_m++) {
-            soma = soma + M[cont_n - 1][cont_m - 1] * A[cont_m - 1];
-        }
-        if (M[cont_n - 1][cont_n - 1] == 0) { // elemento da diagonal principal = 0
-            if ((B[cont_n - 1] - soma) == 0) {
-                printf("\nSistema compativel e indeterminado!\n");
-                break;
-            } else {
-                printf("\nSistema incompativel!\n");
-                break;
+void gaussSeidel(int n, double A[max_i][max_j], double maxIter, double tol, double x[max_v], double b[max_v]){
+    int i, j, k;
+    double erro, sum, xant[max_v];
+    while ((k<maxIter) && (erro>=tol)){
+        erro=0;
+        for(i=1;i<=n;i++){
+            xant[i-1]=x[i-1];
+            sum = 0;
+            for(j=1;j<=n;j++){
+                if(j != i){
+                    sum = sum + A[i-1][j-1]*x[j-1];
+                }
             }
-        } else {
-            A[cont_n - 1] = (B[cont_n - 1] - soma) / M[cont_n - 1][cont_n - 1];
+            x[i-1] = (b[i-1]-sum)/A[i-1][i-1];
+            if((x[i-1]-xant[i-1]) > erro){
+                erro = (x[i-1]-xant[i-1]);
+            }
         }
+        printf("\nIteração = %d erro = %lf", k, erro);
+        k = k+1;
+    }
+    if(erro >= tol){
+        printf("\nNão houve convergencia em %f iterações", maxIter);
     }
 }
 
@@ -76,18 +79,84 @@ int main() {
     le_Vet(B, order);
     // Função imprime vetor
     imprime_Vet(B, order);
-    // Função Subs Retroativa
-    sub_Retroativa(M, B, A, order);
-
+    // Gauss Seidel
+    gaussSeidel(order, M, 100, 0.001, A, B);
+    //Vetor A
+    printf("\nVetor X:\n");
+    imprime_Vet(A, order);
+    printf("\n\n");
     return 0;
 }
-/*
-M =
-3 2 -1
-2 -2 4
--1 0.5 -1
-B =
+/* exemplo
+3
+10
+2
 1
--2
+1
+-15
+1
+2
+3
+10
+7
+32
+6
 0
- */
+0
+0
+
+-- exerc. 1
+4
+4
+1
+1
+1
+2
+-8
+1
+-1
+1
+2
+-5
+1
+1
+1
+1
+-4
+7
+-6
+-1
+-1
+0
+0
+0
+0
+
+-- exerc. 2
+4
+5
+-1
+2
+-1
+1
+9
+-3
+4
+0
+3
+-7
+2
+-2
+2
+-3
+10
+5
+26
+-7
+33
+1
+3
+1
+3
+
+*/

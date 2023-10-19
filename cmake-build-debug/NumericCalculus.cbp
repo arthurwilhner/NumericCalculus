@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/guili/OneDrive/Documentos/GitHub/NumericCalculus/Cap3.8.c">
+		<Unit filename="C:/Users/guili/OneDrive/Documentos/GitHub/NumericCalculus/Cap6.c">
 			<Option target="NumericCalculus"/>
 		</Unit>
 		<Unit filename="C:/Users/guili/OneDrive/Documentos/GitHub/NumericCalculus/CMakeLists.txt">

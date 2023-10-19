@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/NumericCalculus.dir/Cap3.8.c.obj"
-  "CMakeFiles/NumericCalculus.dir/Cap3.8.c.obj.d"
+  "CMakeFiles/NumericCalculus.dir/Cap6.c.obj"
+  "CMakeFiles/NumericCalculus.dir/Cap6.c.obj.d"
   "NumericCalculus.exe"
   "NumericCalculus.exe.manifest"
   "NumericCalculus.pdb"

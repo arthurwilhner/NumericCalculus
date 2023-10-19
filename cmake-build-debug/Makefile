@@ -128,29 +128,29 @@ NumericCalculus/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/build
 .PHONY : NumericCalculus/fast
 
-Cap3.8.obj: Cap3.8.c.obj
-.PHONY : Cap3.8.obj
+Cap6.obj: Cap6.c.obj
+.PHONY : Cap6.obj
 
 # target to build an object file
-Cap3.8.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap3.8.c.obj
-.PHONY : Cap3.8.c.obj
+Cap6.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap6.c.obj
+.PHONY : Cap6.c.obj
 
-Cap3.8.i: Cap3.8.c.i
-.PHONY : Cap3.8.i
+Cap6.i: Cap6.c.i
+.PHONY : Cap6.i
 
 # target to preprocess a source file
-Cap3.8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap3.8.c.i
-.PHONY : Cap3.8.c.i
+Cap6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap6.c.i
+.PHONY : Cap6.c.i
 
-Cap3.8.s: Cap3.8.c.s
-.PHONY : Cap3.8.s
+Cap6.s: Cap6.c.s
+.PHONY : Cap6.s
 
 # target to generate assembly for a file
-Cap3.8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap3.8.c.s
-.PHONY : Cap3.8.c.s
+Cap6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NumericCalculus.dir\build.make CMakeFiles/NumericCalculus.dir/Cap6.c.s
+.PHONY : Cap6.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... NumericCalculus
-	@echo ... Cap3.8.obj
-	@echo ... Cap3.8.i
-	@echo ... Cap3.8.s
+	@echo ... Cap6.obj
+	@echo ... Cap6.i
+	@echo ... Cap6.s
 .PHONY : help
 
 
